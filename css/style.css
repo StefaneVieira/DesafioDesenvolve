@@ -1,0 +1,108 @@
+:root {
+    --background: #E7E7E7;
+    --bg-icones: #000000;
+}
+
+body {
+    background-color: var(--background);
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.principal {
+    height: calc(100vh - 87px);
+    /* viewport height -- ocupa 100% da altura da tela */
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteudo-principal {
+    height: 30%;
+    display: flex;
+    width: 100vw;
+    /* viewport width -- ocupa 100% da largura da tela */
+    justify-content: center;
+}
+
+.avatar {
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+    /* distribui espaços de modo uniforme */
+    width: 25%;
+}
+
+.descricao {
+    font-weight: 600;
+    font-size: 3.5rem;
+    /* rem é uma medida proprorcional a raiz (html) - geralmente é 16px */
+}
+
+.redes-sociais {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.redes-sociais-link {
+    background: var(--bg-icones);
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    line-height: 0;
+}
+
+.icone {
+    width: 1.5rem;
+}
+
+.footer {
+    margin-bottom: 4.5rem;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-device-width: 375px) {
+
+    .conteudo-principal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 2rem;
+    }
+
+    .avatar {
+        height: 100vh;
+        width: 50vw;
+    }
+
+    .container {
+        display: flex;
+        width: 80vw;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    .descricao {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .redes-sociais {
+        display: flex;
+        flex-wrap: wrap;
+        width: 65vw;
+    }
+
+    .redes-sociais-link {
+        margin: 0.5rem;
+    }
+}
